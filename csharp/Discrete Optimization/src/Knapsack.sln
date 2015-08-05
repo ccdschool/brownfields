@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solverdyn", "solverdyn\solverdyn.csproj", "{51681212-C250-4EAC-9D12-A1107DF51B5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51681212-C250-4EAC-9D12-A1107DF51B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51681212-C250-4EAC-9D12-A1107DF51B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51681212-C250-4EAC-9D12-A1107DF51B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51681212-C250-4EAC-9D12-A1107DF51B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
