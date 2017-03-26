@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/layout.jsp">
+		<put-attribute name="header" value="/header.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/footer.jsp" />
+	</definition>
+	<!-- <definition name="base.myaccount" template="/myAccount.jsp" >	
+		<put-attribute name="header" value="/header.jsp" />		
+		<put-attribute name="myaccountbody" value="" />
+		<put-attribute name="footer" value="/footer.jsp" />
+	</definition> -->
+	<definition name="myAccount" extends="base.definition">			
+		<put-attribute name="body" value="/myAccount.jsp" />
+	</definition>
+	<definition name="Error" extends="base.definition">			
+		<put-attribute name="body" value="/Error.jsp" />
+	</definition>
+	<definition name="myOrder" extends="base.definition">			
+		<put-attribute name="body" value="/myOrder.jsp" />
+	</definition>
+	<definition name="myOrderHistory" extends="base.definition">			
+		<put-attribute name="body" value="/myOrderHistory.jsp" />
+	</definition>
+	<definition name="incompatibleItem" extends="base.definition">			
+		<put-attribute name="body" value="/incompatibleItem.jsp" />
+	</definition>
+	<definition name="editProfile" extends="base.definition">			
+		<put-attribute name="body" value="/editProfile.jsp" />
+	</definition>
+	<definition name="home" extends="base.definition">
+		<put-attribute name="body" value="/home.jsp" />
+	</definition>
+	<definition name="login" extends="base.definition">
+		<put-attribute name="header" value="" />	
+		<put-attribute name="body" value="/login.jsp" />
+	</definition>
+	<definition name="signup" extends="base.definition">
+		<put-attribute name="header" value="" />	
+		<put-attribute name="body" value="/signup.jsp" />
+	</definition>
+	<definition name="myCart" extends="base.definition">
+		<put-attribute name="body" value="/myCart.jsp" />
+	</definition>
+	<definition name="supplier" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/supplier.jsp" />
+	</definition>
+	<definition name="addFoodItem" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/addFoodItem.jsp" />
+	</definition>
+	
+	<definition name="orderDetail" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/orderDetail.jsp" />
+	</definition>
+	
+	<definition name="manageFoodItem" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/manageFoodItem.jsp" />
+	</definition>
+	<definition name="deliverylist" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/deliverylist.jsp" />
+	</definition>
+	<definition name="deliverydetail" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/deliverydetail.jsp" />
+	</definition>
+	<definition name="dashboard_admin" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/dashboard_admin.jsp" />
+	</definition>
+	<definition name="addCategory" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/addCategory.jsp" />
+	</definition>
+	<definition name="editCategory" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/editCategory.jsp" />
+	</definition>
+	<definition name="orderReport" extends="base.definition">
+		<put-attribute name="header" value="/header2.jsp" />	
+		<put-attribute name="body" value="/orderReport.jsp" />
+	</definition>
+</tiles-definitions>

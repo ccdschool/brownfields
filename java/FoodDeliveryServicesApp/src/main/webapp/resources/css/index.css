@@ -1,0 +1,44 @@
+.itemList{
+	list-style: none;
+}
+
+.itemList>li{
+	border:1px solid black;
+	margin:5px;
+	padding:5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,th {
+	 padding: 10px;
+}
+
+table th, td {
+    border: 1px solid LightGray;
+}
+
+.button{
+	width:100px;
+}
+
+/* #foodItemForm{
+	margin-left:20px;
+} */
+
+input {
+	height:24px;
+	border: 1px solid black;
+	width:200px;
+}
+
+#txtMiles{
+	witdh:20px;
+}
+
+#foodItemForm #inputChoose{
+	border: 0 solid LightGray;
+}
+

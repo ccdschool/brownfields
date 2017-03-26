@@ -1,0 +1,44 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/" access="permitAll" />
+		<intercept-url pattern="/home" access="permitAll" />
+		<intercept-url pattern="/login" access="permitAll" />
+		<intercept-url pattern="/signup" access="permitAll" />
+		<intercept-url pattern="/resources/**" access="permitAll" />
+		<intercept-url pattern="/supplier/**" access="hasRole('ROLE_SUPPLIER')" />
+		<intercept-url pattern="/**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_CONSUMER', 'ROLE_SUPPLIER')" />
+		
+		<form-login login-page="/login"
+			username-parameter="username"
+			password-parameter="password"
+			authentication-failure-url="/login?error"
+			default-target-url="/loginSuccess" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="admin" password="pass" authorities="ROLE_ADMIN" />
+			</user-service>
+		</authentication-provider>
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query="select userName, password, isActive from user where userName=?"
+				authorities-by-username-query="select userName, userRole from user where userName =?  " />
+		</authentication-provider>
+	</authentication-manager>
+
+	<beans:bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="url" value="jdbc:mysql://localhost/cs544" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="root" />
+	</beans:bean>
+</beans:beans>
