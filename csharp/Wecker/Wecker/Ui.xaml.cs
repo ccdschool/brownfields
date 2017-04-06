@@ -7,27 +7,29 @@ namespace Wecker
 {
     public partial class Ui : Window
     {
-        private Timer timer;
+        private MyTimer timer;
         private DateTime endeZeit;
 
         public Ui() {
             InitializeComponent();
             starten.Click += (s, e) => Starten(Zeitholen());
+            timer = new MyTimer();
+            timer.StoppableTick += TimerTick;
+            timer.Tick += Uhrzeit;
         }
 
         public void Starten(DateTime endeZeit) {
             this.endeZeit = endeZeit;
-            timer = new Timer(state => TimerTick());
-            timer.Change(1000, 1000);
+            timer.Start();
         }
 
         public void TimerTick() {
-            Uhrzeit(endeZeit);
+            Weckzeit(endeZeit);
             if (DateTime.Now >= endeZeit) {
                 using (var soundPlayer = new SoundPlayer(@"c:\Windows\Media\chimes.wav")) {
                     soundPlayer.Play();
                 }
-                timer.Dispose();
+                timer.Stop();
             }
         }
 
@@ -38,7 +40,7 @@ namespace Wecker
             return DateTime.Parse(txtWann.Text);
         }
 
-        public void Uhrzeit(DateTime weckenUm) {
+        public void Weckzeit(DateTime weckenUm) {
             if (lblUhrzeit.Dispatcher.CheckAccess()) {
                 lblUhrzeit.Content = DateTime.Now.ToLongTimeString();
                 lblRest.Content = (weckenUm - DateTime.Now).ToString(@"hh\:mm\:ss");
@@ -50,5 +52,21 @@ namespace Wecker
                 });
             }
         }
+
+        public void Uhrzeit()
+        {
+            if (lblUhrzeit.Dispatcher.CheckAccess())
+            {
+                lblUhrzeit.Content = DateTime.Now.ToLongTimeString();
+            }
+            else
+            {
+                lblUhrzeit.Dispatcher.Invoke(() => {
+                    lblUhrzeit.Content = DateTime.Now.ToLongTimeString();
+                });
+            }
+        }
+
+
     }
 }

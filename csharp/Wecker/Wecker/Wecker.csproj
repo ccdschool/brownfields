@@ -49,6 +49,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyTimer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Ui.xaml.cs">
       <DependentUpon>Ui.xaml</DependentUpon>
