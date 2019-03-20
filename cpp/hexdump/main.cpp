@@ -3,6 +3,12 @@
 #include <sys/stat.h>
 #include <fstream>
 
+/*
+ *
+ * Source: https://github.com/DoctorLai/xxd/blob/master/main.cpp
+ *
+ */
+
 
 std::string tohex(int x, int w = 7, bool upper = false) {
     std::stringstream stream;
