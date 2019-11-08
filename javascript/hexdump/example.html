@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-EN">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hexdump.js</title>
+    <script type="text/javascript" src="src/hexdump.js"></script>
+  </head>
+
+  <body>
+    <pre id="hexdump"></pre>
+
+    <script type="text/javascript">
+      var placeholder = '䉁䅃䍂AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' + 
+        '䉁䅃䍂䉁䅃䍂䉁䅃䉁䅃䍂AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
+        '䉁䅃䍂䉁䅃䍂䉁䅃䉁䅃䍂䉁䅃䍂䉁䅃䉁䅃䍂䉁䅃䍂䍂䉁䅃䍂䉁䅃A';
+      
+
+      new Hexdump(placeholder, {
+        container: 'hexdump'
+        , base: 'hexadecimal'
+        , width: 16
+        , ascii: true
+        , byteGrouping: 1
+        , html: true
+        , lineNumber: true
+        , style: {
+            lineNumberLeft: ''
+          , lineNumberRight: ':'
+          , stringLeft: '|'
+          , stringRight: '|'
+          , hexLeft: ''
+          , hexRight: ''
+          , hexNull: '.g'
+          , stringNull: '.'
+        }
+      });
+    </script>
+  </body>
+</html>
