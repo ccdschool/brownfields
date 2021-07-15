@@ -87,6 +87,8 @@ public class Snake {
             }
         });
         frame.setResizable(false);
+        frame.setFocusable(true);
+        frame.requestFocusInWindow();
     }
 
     public void setJMenueBar(JFrame frame) {
