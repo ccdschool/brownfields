@@ -138,7 +138,7 @@ class Snake : IRenderable
                 throw new ArgumentOutOfRangeException();
         }
 
-        if (_body.Contains(newHead) || !PositionIsValid(newHead))
+        if (_body.Contains(newHead) || !(newHead.Top >= 0 && newHead.Left >= 0))
         {
             Dead = true;
             return;
@@ -174,9 +174,6 @@ class Snake : IRenderable
             Console.Write("■");
         }
     }
-
-    private static bool PositionIsValid(Position position) =>
-        position.Top >= 0 && position.Left >= 0;
 }
 
 class SnakeGame : IRenderable
