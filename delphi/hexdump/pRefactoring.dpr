@@ -1,6 +1,8 @@
-program hexdump;
+﻿program pRefactoring;
 
 {$APPTYPE CONSOLE}
+
+{$R *.res}
 
 uses
   System.SysUtils,
@@ -63,6 +65,7 @@ begin
   finally
     input.Free;
   end;
+  Readln;
 end;
 
 begin
