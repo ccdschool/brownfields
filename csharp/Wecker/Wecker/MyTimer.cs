@@ -9,12 +9,12 @@ namespace Wecker
 {
     public class MyTimer
     {
-        private Timer timer;
+        private Timer? timer;
         private bool started;
 
-        public event Action Tick;
+        public event Action? Tick;
 
-        public event Action StoppableTick;
+        public event Action? StoppableTick;
 
         public MyTimer()
         {
