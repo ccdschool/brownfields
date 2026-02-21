@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{F7C460B7-9205-4449-9A91-39475E12C255}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.Tests", "Snake.Tests\Snake.Tests.csproj", "{5285DD3E-7DEE-4331-B42F-0711739D8201}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{F7C460B7-9205-4449-9A91-39475E12C255}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7C460B7-9205-4449-9A91-39475E12C255}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7C460B7-9205-4449-9A91-39475E12C255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5285DD3E-7DEE-4331-B42F-0711739D8201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5285DD3E-7DEE-4331-B42F-0711739D8201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5285DD3E-7DEE-4331-B42F-0711739D8201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5285DD3E-7DEE-4331-B42F-0711739D8201}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

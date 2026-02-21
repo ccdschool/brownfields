@@ -1,9 +1,19 @@
 cmake_minimum_required(VERSION 3.13)
 project(Snake CXX)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+add_library(Snake.Lib STATIC)
+target_sources(Snake.Lib 
+PRIVATE
+	SnakeGame.cpp 
+	SnakeGame.h 
+	Console.cpp 
+	Console.h
+)
 
-add_executable(Snake SnakeGame.cpp Console.cpp Console.h)
-set_target_properties(Snake PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+add_executable(Snake main.cpp)
+target_link_libraries(Snake PRIVATE	Snake.Lib)
+
+add_executable(Snake.Tests Snake.Tests.cpp)
+target_link_libraries(Snake.Tests PRIVATE Snake.Lib)
+
+AddGoogleTests(Snake.Tests)

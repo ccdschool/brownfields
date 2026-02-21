@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="approvaltests" type="repository">
+    <properties maven-id="com.approvaltests:approvaltests:24.4.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/approvaltests-24.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/approvaltests-util-24.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.16.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
